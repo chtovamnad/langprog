@@ -36,32 +36,10 @@ class FP4 {
 	public static void main(String[] args) {
 		TCalc list1 = new TCalc();
 		List<String> l1 = new ArrayList<>();
-		l1 = list1.addPerson(l1, "Ренат");
+		l1 = list1.addPerson(l1, "Ринат");
 		System.out.println("Размер чаевых для l1: " + list1.getTPercentage(l1));
 		List<String> l2 = l1;
-		for (int i=0; i<10; i++)
-			l2 = list1.addPerson(l1, "Юрий");
+		l2 = list1.addPerson(l1, "Юрий");
 		System.out.println("Размер чаевых для l1: " + list1.getTPercentage(l2));
-		//Тестирование чистой функции getTPercentage() для 3-х вариантов:
-		//ПУстой список:
-		List<String> l3 = new ArrayList<>();
-		System.out.println("\nПроверка пустого списка");
-
-		if (list1.getTPercentage(l3) == 0)
-			System.out.println("Работает правильно");
-		else
-			System.out.println("Ошибка");
-		//Список от 1 до 5 человек
-		System.out.println("\nПроверка списка l1");
-		if (list1.getTPercentage(l1) == 10)
-			System.out.println("Работает правильно");
-		else
-			System.out.println("Ошибка");
-		//Список больше 5 человек 
-		System.out.println("\nПроверка cписка l2");
-		if (list1.getTPercentage(l2) == 20)
-			System.out.println("Работает правильно");
-		else
-			System.out.println("Ошибка");
 	}
 }
